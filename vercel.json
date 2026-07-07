@@ -1,4 +1,4 @@
 {
   "buildCommand": "node vercel-build.js",
-  "public": "Leve Beauty Bar"
+  "outputDirectory": "Leve Beauty Bar"
 }

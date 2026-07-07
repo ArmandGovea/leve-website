@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Generate config.js from environment variables
-const configContent = `window.config = {
+const configContent = `
+window.config = {
   firebase: {
     apiKey:            '${process.env.FIREBASE_API_KEY}',
     authDomain:        '${process.env.FIREBASE_AUTH_DOMAIN}',
@@ -18,16 +19,9 @@ const configContent = `window.config = {
     templateId:   '${process.env.EMAILJS_TEMPLATE_ID}',
     bookingEmail: '${process.env.BOOKING_EMAIL}',
   },
-};`;
+};
+`;
 
-// Handle the directory with spaces properly
-const dir = path.join(__dirname, 'Leve Beauty Bar');
-const outputPath = path.join(dir, 'config.js');
-
-// Ensure directory exists
-if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });
-}
-
+const outputPath = path.join(__dirname, 'Leve Beauty Bar', 'config.js');
 fs.writeFileSync(outputPath, configContent);
-console.log('✅ config.js generated successfully at:', outputPath);
+console.log('✅ config.js generated from environment variables');
