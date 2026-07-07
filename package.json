@@ -1,5 +1,8 @@
 {
   "name": "leve-website",
   "version": "1.0.0",
-  "description": "Levé Beauty Bar booking website"
+  "description": "Levé Beauty Bar booking website",
+  "dependencies": {
+    "vercel": "^54.21.1"
+  }
 }

@@ -2,7 +2,7 @@
 
 A modern, responsive beauty studio website with integrated appointment booking, real-time calendar management, and email notifications.
 
-**Live:** [leve-295d0.web.app](https://leve-295d0.web.app)
+**Live:** [leve-beauty-bar.vercel.app](https://leve-beauty-bar.vercel.app)
 
 ---
 
