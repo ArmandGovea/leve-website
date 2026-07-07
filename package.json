@@ -1,0 +1,8 @@
+{
+  "name": "leve-website",
+  "version": "1.0.0",
+  "description": "Levé Beauty Bar booking website",
+  "scripts": {
+    "build": "node vercel-build.js"
+  }
+}
