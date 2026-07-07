@@ -1,3 +1,0 @@
-{
-  "buildCommand": "node vercel-build.js"
-}
