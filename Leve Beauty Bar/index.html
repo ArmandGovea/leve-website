@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Levé Nail Bar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">Levé</div>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#home" class="nav__link">Home</a></li>
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#services" class="nav__link">Services</a></li>
+      <li><a href="#gallery" class="nav__link">Gallery</a></li>
+      <li><a href="#contact" class="nav__link nav__link--book">Book Now</a></li>
+    </ul>
+    <button class="nav__burger" id="burgerBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Beauty Studio</p>
+      <h1 class="hero__title">Where Beauty<br /><em>Becomes Art</em></h1>
+      <p class="hero__sub">Brows · Nails · Lashes — crafted for you, always.</p>
+      <a href="#contact" class="btn btn--primary">Book Your Visit</a>
+    </div>
+    <a href="#about" class="hero__scroll-hint" aria-label="Scroll down for more">
+      <span class="hero__scroll-text">Scroll</span>
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-chevron" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__image-wrap">
+        <div class="about__image-frame">
+          <div class="about__image-placeholder">
+            <img src="pricing-menu.jpg" alt="Levé Nail Bar pricing menu — Nails, Brows, Lashes & Extensions" class="about__image-img" />
+          </div>
+        </div>
+        <div class="about__accent-box"></div>
+      </div>
+      <div class="about__text">
+        <!-- <p class="section-label">Our Story</p> -->
+        <h2 class="section-title">More Than a<br /><em>Beauty Studio</em></h2>
+        <p class="about__body">
+          Every appointment is a
+          tailored experience — never rushed, always considered.
+        </p>
+        <p class="about__body">
+          You deserve nothing less.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <!-- <p class="section-label center">What We Do</p> -->
+      <h2 class="section-title center">S<em>e</em>r<em>v</em>i<em>c</em>e<em>s</em></h2>
+      <p class="services__intro">Explore each category to see everything we offer.</p>
+      <div class="services__grid">
+
+        <div class="service-card service-card--beige" data-service="brows">
+          <div class="service-card__icon">◈</div>
+          <h3 class="service-card__title">Brows</h3>
+          <p class="service-card__desc">Frame your face with perfectly shaped and tinted brows tailored to your features.</p>
+          <ul class="service-card__list">
+            <li>Brow Tint</li>
+            <li>Brow Shaping (Wax/Tweeze)</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Book Brows</a>
+        </div>
+
+        <div class="service-card service-card--featured" data-service="nails">
+          <!-- <div class="service-card__badge">Most Popular</div> -->
+          <div class="service-card__icon">◇</div>
+          <h3 class="service-card__title">Nails</h3>
+          <p class="service-card__desc">From simple overlays to full gel sets — designed to perfection.</p>
+          <ul class="service-card__list">
+              <li>Natural Nail (Plain Set)</li>
+              <li>Short Gel Tips (Plain Set)</li>
+              <li>Long Gel Tips (Plain Set)</li>
+              <li>Designs</li>
+              <li>Gel Toes</li>
+              <li>Soak Off (Removal)</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Book Nails</a>
+        </div>
+
+        <div class="service-card" data-service="lashes">
+          <div class="service-card__icon">◉</div>
+          <h3 class="service-card__title">Lashes</h3>
+          <p class="service-card__desc">From a natural tint to full lash extensions — effortless beauty that lasts.</p>
+          <ul class="service-card__list">
+            <li>Lash Tinting</li>
+            <li>Classic Set</li>
+            <li>Hybrid Set</li>
+            <li>Volume Set</li>
+            <li>Removal</li>
+            <li>Fill</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Book Lashes</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2 class="section-title center">G<em>a</em>l<em>l</em>e<em>r</em>y</h2>
+      <p class="services__intro">A few of our favourite results, fresh from the studio.</p>
+    </div>
+    <div class="gallery__track-wrap">
+      <div class="gallery__track" id="galleryTrack">
+        <!-- Slides are injected automatically by index.js from the GALLERY_IMAGES list -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / BOOKING -->
+  <section class="contact" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Book Your<br /><em>Appointment</em></h2>
+        <p class="contact__body">
+          Ready to treat yourself? Fill in your details, choose your service and we'll
+          be in touch to confirm your appointment time.
+        </p>
+        <div class="contact__details">
+          <div class="contact__detail">
+            <span class="contact__detail-icon">◎</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon–Fri: 8am – 8pm</p>
+              <p>Saturday: 9am – 8pm</p>
+              <p>Sunday: 10am – 6pm</p>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__detail-icon">◎</span>
+            <div>
+              <strong>Location</strong>
+              <p>Shared upon booking confirmation</p>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__detail-icon contact__detail-icon--insta" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+                <circle cx="12" cy="12" r="4.6"/>
+                <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+            <div>
+              <strong>Instagram</strong>
+              <p><a href="https://www.instagram.com/leve.beauty.bar?igsh=enljcmUwNGh5MGJw" target="_blank" rel="noopener noreferrer">@leve.beauty.bar</a></p>
+            </div>
+          </div>
+          <!-- <div class="contact__detail">
+            <span class="contact__detail-icon">◎</span>
+            <div>
+              <strong>Email</strong>
+              <p>levebeautybar@</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="booking-form" id="bookingForm">
+
+        <!-- Step indicator -->
+        <div class="form-steps">
+          <div class="form-step active" data-step="1">
+            <span class="form-step__num">1</span>
+            <span class="form-step__label">Details</span>
+          </div>
+          <div class="form-step__line"></div>
+          <div class="form-step" data-step="2">
+            <span class="form-step__num">2</span>
+            <span class="form-step__label">Service</span>
+          </div>
+          <div class="form-step__line"></div>
+          <div class="form-step" data-step="3">
+            <span class="form-step__num">3</span>
+            <span class="form-step__label">Confirm</span>
+          </div>
+        </div>
+
+        <!-- ── STEP 1 ── -->
+        <div class="form-panel active" id="step1">
+          <h3 class="form-panel__title">Your Details</h3>
+
+          <div class="form-group">
+            <label class="form-label" for="fullName">Full Name</label>
+            <input class="form-input" type="text" id="fullName" placeholder="Jane Smith" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" type="email" id="email" placeholder="jane@example.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" placeholder="+27 00 000 0000" />
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-row" for="needLocation">
+              <input type="checkbox" id="needLocation" />
+              <span>Please send me the studio location with my booking confirmation</span>
+            </label>
+          </div>
+
+          <!-- ── CUSTOM CALENDAR ── -->
+          <div class="form-group">
+            <label class="form-label">Preferred Date</label>
+            <div class="cal-wrap" id="calWrap">
+
+              <div class="cal-loading hidden" id="calLoading">
+                <div class="cal-spinner"></div>
+                <span>Loading availability…</span>
+              </div>
+
+              <div class="cal-header">
+                <button class="cal-nav-btn" id="calPrev">&#8249;</button>
+                <span class="cal-month-title" id="calMonthTitle"></span>
+                <button class="cal-nav-btn" id="calNext">&#8250;</button>
+              </div>
+
+              <div class="cal-weekdays">
+                <span>Su</span><span>Mo</span><span>Tu</span>
+                <span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+              </div>
+
+              <div class="cal-grid" id="calGrid"></div>
+
+              <div class="cal-legend">
+                <span><span class="cal-pip cal-pip--open"></span>Available</span>
+                <span><span class="cal-pip cal-pip--booked"></span>Some bookings</span>
+                <span><span class="cal-pip cal-pip--filling"></span>Filling up</span>
+                <span><span class="cal-pip cal-pip--full"></span>Fully booked</span>
+              </div>
+            </div>
+            <input type="hidden" id="selectedDate" />
+            <p class="cal-chosen" id="calChosen"></p>
+          </div>
+
+          <!-- Time slot — populated by JS -->
+          <div class="form-group">
+            <label class="form-label" for="time">Preferred Time</label>
+            <select class="form-input" id="time" disabled>
+              <option value="">Select a date first…</option>
+            </select>
+          </div>
+
+          <button class="btn btn--primary full-width" id="toStep2">Continue →</button>
+        </div>
+
+        <!-- ── STEP 2 ── -->
+        <div class="form-panel" id="step2">
+          <h3 class="form-panel__title">Choose Your Service</h3>
+
+          <div class="category-tabs" id="categoryTabs">
+            <button class="cat-tab active" data-cat="brows">Brows</button>
+            <button class="cat-tab" data-cat="nails">Nails</button>
+            <button class="cat-tab" data-cat="lashes">Lashes</button>
+          </div>
+
+          <div class="cat-panel active" id="cat-brows">
+            <p class="cat-panel__desc">Choose your brow service:</p>
+            <div class="service-options">
+              <label class="service-option">
+                <input type="radio" name="browsService" value="Brow Tint" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Brow Tint</span>
+                  <span class="service-option__desc">Deep colour for bold, defined brows.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="browsService" value="Brow Shaping" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Brow Shaping</span>
+                  <span class="service-option__desc">Perfectly sculpted to suit your face shape.</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="cat-panel" id="cat-nails">
+            <p class="cat-panel__desc">Choose your nail service:</p>
+            <div class="service-options">
+              <label class="service-option">
+                <input type="radio" name="nailsService" value="Natural Nail Overlay (Plain Set)" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Natural Nail Overlay — Plain Set</span>
+                  <span class="service-option__desc">Clean, shaped and buffed to perfection.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="nailsService" value="Short Gel Tips (Plain Set)" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Short Gel Tips — Plain Set</span>
+                  <span class="service-option__desc">Natural-length gel extension in a single colour.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="nailsService" value="Long Gel Tips (Plain Set)" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Long Gel Tips — Plain Set</span>
+                  <span class="service-option__desc">Full-length gel extension in a single colour.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="nailsService" value="Designs" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Designs</span>
+                  <span class="service-option__desc">Custom nail art added to any set.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="nailsService" value="Gel Toes" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Gel Toes</span>
+                  <span class="service-option__desc">Long-lasting gel polish for your toes.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="nailsService" value="Soak Off (Removal)" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Soak Off — Removal</span>
+                  <span class="service-option__desc">Safe removal of your existing gel set.</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="cat-panel" id="cat-lashes">
+            <p class="cat-panel__desc">Choose your lash service:</p>
+            <div class="service-options">
+              <label class="service-option">
+                <input type="radio" name="lashesService" value="Lash Tinting" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Lash Tinting</span>
+                  <span class="service-option__desc">Deep, long-lasting tint for naturally fuller lashes.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="lashesService" value="Classic Set" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Classic Set</span>
+                  <span class="service-option__desc">One extension per natural lash for a subtle, defined look.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="lashesService" value="Hybrid Set" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Hybrid Set</span>
+                  <span class="service-option__desc">A mix of classic and volume fans for added texture.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="lashesService" value="Volume Set" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Volume Set</span>
+                  <span class="service-option__desc">Multiple ultra-fine extensions per lash for full, dramatic volume.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="lashesService" value="Removal" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Removal</span>
+                  <span class="service-option__desc">Safe, gentle removal of your existing lash extensions.</span>
+                </div>
+              </label>
+              <label class="service-option">
+                <input type="radio" name="lashesService" value="Fill" />
+                <div class="service-option__box">
+                  <span class="service-option__name">Fill</span>
+                  <span class="service-option__desc">Top-up for existing sets, recommended every 2–3 weeks.</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="notes">Additional Notes <span class="optional">(optional)</span></label>
+            <textarea class="form-input" id="notes" rows="3" placeholder="Any allergies, preferences or special requests..."></textarea>
+          </div>
+
+          <div class="form-nav">
+            <button class="btn btn--ghost" id="backToStep1">← Back</button>
+            <button class="btn btn--primary" id="toStep3">Review →</button>
+          </div>
+        </div>
+
+        <!-- ── STEP 3 ── -->
+        <div class="form-panel" id="step3">
+          <h3 class="form-panel__title">Confirm Booking</h3>
+          <div class="summary" id="bookingSummary"></div>
+          <div class="form-group">
+            <label class="form-label" for="howHeard">How did you hear about us?</label>
+            <select class="form-input" id="howHeard">
+              <option value="">Select...</option>
+              <option>Instagram</option>
+              <option>Friend / Referral</option>
+              <option>Google</option>
+              <option>Walk-in</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-nav">
+            <button class="btn btn--ghost" id="backToStep2">← Back</button>
+            <button class="btn btn--primary full-width" id="submitBooking">Confirm Booking ✦</button>
+          </div>
+        </div>
+
+        <!-- ── Success ── -->
+        <div class="form-panel" id="stepSuccess">
+          <div class="success-state">
+            <div class="success-icon">✦</div>
+            <h3 class="success-title">You're All Set!</h3>
+            <p class="success-body">Thank you for booking with Levé. We'll confirm your appointment via email within 24 hours.</p>
+            <button class="btn btn--outline" id="resetForm">Make Another Booking</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Levé</div>
+      <p class="footer__tagline">Where beauty becomes art.</p>
+      <div class="footer__links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Book Now</a>
+      </div>
+      <a class="footer__social" href="https://www.instagram.com/leve.beauty.bar?igsh=enljcmUwNGh5MGJw" target="_blank" rel="noopener noreferrer" aria-label="Levé Nail Bar on Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+          <circle cx="12" cy="12" r="4.6"/>
+          <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <p class="footer__copy">© 2025 Levé Beauty Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Firebase v10 compat build -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Configuration (copy config.example.js to config.js and fill in your values) -->
+  <script src="config.js"></script>
+
+  <script src="index.js"></script>
+</body>
+</html>
