@@ -73,27 +73,61 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ══════════════════════════════════════════
      GALLERY — auto-scrolling photo strip
      ══════════════════════════════════════════
-     Add your photo filenames below. Place the actual image files in
-     an "images/gallery/" folder next to index.html (see setup notes
-     at the top of this file / the chat instructions for details). */
-  const GALLERY_IMAGES = [
-    'images/gallery/gallery-1.jpeg',
-    'images/gallery/gallery-2.jpeg',
-    'images/gallery/gallery-3.jpeg',
-    'images/gallery/gallery-4.jpeg',
-    'images/gallery/gallery-5.jpeg',
-    'images/gallery/gallery-6.jpeg',
-    'images/gallery/gallery-7.jpeg',
-  ];
+     No manual list to maintain — just drop numbered photos into
+     "images/gallery/" (gallery-1.jpeg, gallery-2.jpeg, gallery-3.jpeg…)
+     and this automatically detects how many exist and displays them.
+
+     How it works: browsers have no API to "list a folder," so instead
+     this attempts to load gallery-1, gallery-2, gallery-3… in order and
+     checks whether each one actually exists. It keeps counting up until
+     it hits GALLERY_MAX_PROBE (a safety ceiling) or finds enough
+     consecutive missing numbers in a row to safely assume the list has
+     ended — so a single accidentally-skipped number won't cut the
+     gallery short. */
+  const GALLERY_FOLDER   = 'images/gallery/';
+  const GALLERY_PREFIX   = 'gallery-';
+  const GALLERY_EXT      = '.jpeg';   // change if your photos use a different extension
+  const GALLERY_MAX_PROBE = 60;       // stop searching after this many numbers, just in case
+  const GALLERY_MAX_GAP   = 3;        // stop after this many consecutive misses in a row
+
+  function probeImage(src) {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload  = () => resolve(src);
+      img.onerror = () => resolve(null);
+      img.src = src;
+    });
+  }
+
+  async function detectGalleryImages() {
+    const found = [];
+    let consecutiveMisses = 0;
+
+    for (let i = 1; i <= GALLERY_MAX_PROBE; i++) {
+      const src = `${GALLERY_FOLDER}${GALLERY_PREFIX}${i}${GALLERY_EXT}`;
+      const result = await probeImage(src);
+      if (result) {
+        found.push(result);
+        consecutiveMisses = 0;
+      } else {
+        consecutiveMisses++;
+        if (consecutiveMisses >= GALLERY_MAX_GAP) break;
+      }
+    }
+    return found;
+  }
 
   const galleryTrack = document.getElementById('galleryTrack');
-  if (galleryTrack && GALLERY_IMAGES.length) {
-    /* Render the list twice back-to-back so the CSS marquee animation
-       (translateX 0 → -50%) loops seamlessly with no visible jump. */
-    const slidesHtml = GALLERY_IMAGES.map(src =>
-      `<div class="gallery__slide"><img src="${src}" alt="Levé Nail Bar gallery photo" loading="lazy" /></div>`
-    ).join('');
-    galleryTrack.innerHTML = slidesHtml + slidesHtml;
+  if (galleryTrack) {
+    detectGalleryImages().then(images => {
+      if (!images.length) return;
+      /* Render the list twice back-to-back so the CSS marquee animation
+         (translateX 0 → -50%) loops seamlessly with no visible jump. */
+      const slidesHtml = images.map(src =>
+        `<div class="gallery__slide"><img src="${src}" alt="Levé Nail Bar gallery photo" loading="lazy" /></div>`
+      ).join('');
+      galleryTrack.innerHTML = slidesHtml + slidesHtml;
+    });
   }
 
   /* ══════════════════════════════════════════
