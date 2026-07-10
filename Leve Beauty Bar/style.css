@@ -217,11 +217,11 @@ em { font-style: italic; color: var(--accent); }
   padding-top: env(safe-area-inset-top, 0px);
 }
 @media (max-width: 768px) {
-  .nav__link {
-    /* extra clearance so the heading isn't crowded under in-app
-       browser headers (Instagram/Facebook webviews etc.) */
-    padding-top: calc(12rem + env(safe-area-inset-top, 0px));
-  }
+
+    .hero__content {
+        padding-top: 5rem;
+    }
+
 }
 .hero__bg {
   position: absolute;
