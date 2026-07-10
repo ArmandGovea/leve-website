@@ -168,6 +168,7 @@ em { font-style: italic; color: var(--accent); }
   color: rgba(255,255,255,0.85);
   transition: color var(--transition);
   position: relative;
+  margin-top: 0.8rem;
 }
 .nav__link::after {
   content: '';
@@ -181,7 +182,6 @@ em { font-style: italic; color: var(--accent); }
 }
 .nav__link:hover::after { transform: scaleX(1); }
 .nav.scrolled .nav__link { color: var(--text-main); }
-.nav_link { margin-top: 5px; }
 .nav__link--book { top: 10px; }
 
 .nav__burger {
