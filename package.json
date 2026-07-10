@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Levé Beauty Bar booking website",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "vercel": "^54.21.1"
   }
 }
