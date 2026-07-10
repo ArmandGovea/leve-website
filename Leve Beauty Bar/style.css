@@ -168,7 +168,6 @@ em { font-style: italic; color: var(--accent); }
   color: rgba(255,255,255,0.85);
   transition: color var(--transition);
   position: relative;
-  margin-top: 0.8rem;
 }
 .nav__link::after {
   content: '';
@@ -182,7 +181,7 @@ em { font-style: italic; color: var(--accent); }
 }
 .nav__link:hover::after { transform: scaleX(1); }
 .nav.scrolled .nav__link { color: var(--text-main); }
-.nav__link--book { top: 10px; }
+.nav__link--book { top: 2px; }
 
 .nav__burger {
   display: none;
@@ -221,7 +220,7 @@ em { font-style: italic; color: var(--accent); }
   .hero {
     /* extra clearance so the heading isn't crowded under in-app
        browser headers (Instagram/Facebook webviews etc.) */
-    padding-top: calc(7rem + env(safe-area-inset-top, 0px));
+    padding-top: calc(12rem + env(safe-area-inset-top, 0px));
   }
 }
 .hero__bg {
