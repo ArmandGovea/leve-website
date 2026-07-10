@@ -181,7 +181,7 @@ em { font-style: italic; color: var(--accent); }
 }
 .nav__link:hover::after { transform: scaleX(1); }
 .nav.scrolled .nav__link { color: var(--text-main); }
-.nav__link--book { top: 2px; }
+.nav__link--book { top: 0px; }
 
 .nav__burger {
   display: none;
