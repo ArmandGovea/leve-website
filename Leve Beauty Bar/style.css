@@ -216,12 +216,10 @@ em { font-style: italic; color: var(--accent); }
   overflow: hidden;
   padding-top: env(safe-area-inset-top, 0px);
 }
-@media (max-width: 768px) {
-
-    .hero {
-        padding-top: calc(9rem + env(safe-area-inset-top));
-    }
-
+@media (max-width: 956px) {
+  .hero {
+    padding-top: calc(9rem + env(safe-area-inset-top));
+  }
 }
 .hero__bg {
   position: absolute;
